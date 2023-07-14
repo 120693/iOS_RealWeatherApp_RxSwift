@@ -17,6 +17,23 @@
 		92C86DC42A5B7ED5008ECA0F /* RealWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DC32A5B7ED5008ECA0F /* RealWeatherAppTests.swift */; };
 		92C86DCE2A5B7ED5008ECA0F /* RealWeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DCD2A5B7ED5008ECA0F /* RealWeatherAppUITests.swift */; };
 		92C86DD02A5B7ED5008ECA0F /* RealWeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DCF2A5B7ED5008ECA0F /* RealWeatherAppUITestsLaunchTests.swift */; };
+		92C86DDD2A5B8A44008ECA0F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DDC2A5B8A44008ECA0F /* WeatherModel.swift */; };
+		92C86DE02A5B8A8C008ECA0F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DDE2A5B8A8C008ECA0F /* ResultViewController.swift */; };
+		92C86DE12A5B8A8C008ECA0F /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C86DDF2A5B8A8C008ECA0F /* ResultViewController.xib */; };
+		92C86DE32A5B9C12008ECA0F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DE22A5B9C12008ECA0F /* HeaderView.swift */; };
+		92C86DE52A5B9D76008ECA0F /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C86DE42A5B9D76008ECA0F /* HeaderView.xib */; };
+		92C86DE82A5BB141008ECA0F /* WeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DE62A5BB141008ECA0F /* WeekTableViewCell.swift */; };
+		92C86DE92A5BB141008ECA0F /* WeekTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C86DE72A5BB141008ECA0F /* WeekTableViewCell.xib */; };
+		92C86DEC2A5BFFAF008ECA0F /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DEA2A5BFFAF008ECA0F /* CollectionTableViewCell.swift */; };
+		92C86DED2A5BFFAF008ECA0F /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C86DEB2A5BFFAF008ECA0F /* CollectionTableViewCell.xib */; };
+		92C86DF02A5CEDC2008ECA0F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 92C86DEF2A5CEDC2008ECA0F /* Kingfisher */; };
+		92C86DF32A5D2D6F008ECA0F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DF12A5D2D6F008ECA0F /* CollectionViewCell.swift */; };
+		92C86DF42A5D2D6F008ECA0F /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C86DF22A5D2D6F008ECA0F /* CollectionViewCell.xib */; };
+		92C86DF62A5EA28B008ECA0F /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DF52A5EA28B008ECA0F /* FooterView.swift */; };
+		92C86DF82A5EA29F008ECA0F /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C86DF72A5EA29F008ECA0F /* FooterView.xib */; };
+		92C86DFB2A5EA47C008ECA0F /* FooterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86DF92A5EA47C008ECA0F /* FooterCollectionViewCell.swift */; };
+		92C86DFC2A5EA47C008ECA0F /* FooterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C86DFA2A5EA47C008ECA0F /* FooterCollectionViewCell.xib */; };
+		92C86E042A5FA76C008ECA0F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C86E032A5FA76C008ECA0F /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +68,22 @@
 		92C86DC92A5B7ED5008ECA0F /* RealWeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealWeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C86DCD2A5B7ED5008ECA0F /* RealWeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealWeatherAppUITests.swift; sourceTree = "<group>"; };
 		92C86DCF2A5B7ED5008ECA0F /* RealWeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealWeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92C86DDC2A5B8A44008ECA0F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		92C86DDE2A5B8A8C008ECA0F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		92C86DDF2A5B8A8C008ECA0F /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		92C86DE22A5B9C12008ECA0F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		92C86DE42A5B9D76008ECA0F /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		92C86DE62A5BB141008ECA0F /* WeekTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTableViewCell.swift; sourceTree = "<group>"; };
+		92C86DE72A5BB141008ECA0F /* WeekTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekTableViewCell.xib; sourceTree = "<group>"; };
+		92C86DEA2A5BFFAF008ECA0F /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		92C86DEB2A5BFFAF008ECA0F /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		92C86DF12A5D2D6F008ECA0F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		92C86DF22A5D2D6F008ECA0F /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		92C86DF52A5EA28B008ECA0F /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		92C86DF72A5EA29F008ECA0F /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
+		92C86DF92A5EA47C008ECA0F /* FooterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionViewCell.swift; sourceTree = "<group>"; };
+		92C86DFA2A5EA47C008ECA0F /* FooterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterCollectionViewCell.xib; sourceTree = "<group>"; };
+		92C86E032A5FA76C008ECA0F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C86DF02A5CEDC2008ECA0F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +137,23 @@
 			children = (
 				92C86DA92A5B7ED0008ECA0F /* AppDelegate.swift */,
 				92C86DAB2A5B7ED0008ECA0F /* SceneDelegate.swift */,
+				92C86DDC2A5B8A44008ECA0F /* WeatherModel.swift */,
 				92C86DAD2A5B7ED0008ECA0F /* ViewController.swift */,
+				92C86DDE2A5B8A8C008ECA0F /* ResultViewController.swift */,
+				92C86E032A5FA76C008ECA0F /* PageViewController.swift */,
+				92C86DEA2A5BFFAF008ECA0F /* CollectionTableViewCell.swift */,
+				92C86DEB2A5BFFAF008ECA0F /* CollectionTableViewCell.xib */,
+				92C86DF12A5D2D6F008ECA0F /* CollectionViewCell.swift */,
+				92C86DF22A5D2D6F008ECA0F /* CollectionViewCell.xib */,
+				92C86DE62A5BB141008ECA0F /* WeekTableViewCell.swift */,
+				92C86DE72A5BB141008ECA0F /* WeekTableViewCell.xib */,
+				92C86DE22A5B9C12008ECA0F /* HeaderView.swift */,
+				92C86DF52A5EA28B008ECA0F /* FooterView.swift */,
+				92C86DF72A5EA29F008ECA0F /* FooterView.xib */,
+				92C86DF92A5EA47C008ECA0F /* FooterCollectionViewCell.swift */,
+				92C86DFA2A5EA47C008ECA0F /* FooterCollectionViewCell.xib */,
+				92C86DE42A5B9D76008ECA0F /* HeaderView.xib */,
+				92C86DDF2A5B8A8C008ECA0F /* ResultViewController.xib */,
 				92C86DAF2A5B7ED0008ECA0F /* Main.storyboard */,
 				92C86DB52A5B7ED4008ECA0F /* Assets.xcassets */,
 				92C86DB72A5B7ED4008ECA0F /* LaunchScreen.storyboard */,
@@ -146,6 +196,9 @@
 			dependencies = (
 			);
 			name = RealWeatherApp;
+			packageProductDependencies = (
+				92C86DEF2A5CEDC2008ECA0F /* Kingfisher */,
+			);
 			productName = RealWeatherApp;
 			productReference = 92C86DA62A5B7ED0008ECA0F /* RealWeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +271,9 @@
 				Base,
 			);
 			mainGroup = 92C86D9D2A5B7ED0008ECA0F;
+			packageReferences = (
+				92C86DEE2A5CEDC2008ECA0F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 92C86DA72A5B7ED0008ECA0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,9 +290,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C86DED2A5BFFAF008ECA0F /* CollectionTableViewCell.xib in Resources */,
 				92C86DB92A5B7ED4008ECA0F /* LaunchScreen.storyboard in Resources */,
+				92C86DE52A5B9D76008ECA0F /* HeaderView.xib in Resources */,
 				92C86DB62A5B7ED4008ECA0F /* Assets.xcassets in Resources */,
+				92C86DF82A5EA29F008ECA0F /* FooterView.xib in Resources */,
+				92C86DE92A5BB141008ECA0F /* WeekTableViewCell.xib in Resources */,
 				92C86DB12A5B7ED0008ECA0F /* Main.storyboard in Resources */,
+				92C86DFC2A5EA47C008ECA0F /* FooterCollectionViewCell.xib in Resources */,
+				92C86DF42A5D2D6F008ECA0F /* CollectionViewCell.xib in Resources */,
+				92C86DE12A5B8A8C008ECA0F /* ResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +324,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C86DF32A5D2D6F008ECA0F /* CollectionViewCell.swift in Sources */,
 				92C86DB42A5B7ED0008ECA0F /* RealWeatherApp.xcdatamodeld in Sources */,
+				92C86DE82A5BB141008ECA0F /* WeekTableViewCell.swift in Sources */,
 				92C86DAE2A5B7ED0008ECA0F /* ViewController.swift in Sources */,
 				92C86DAA2A5B7ED0008ECA0F /* AppDelegate.swift in Sources */,
 				92C86DAC2A5B7ED0008ECA0F /* SceneDelegate.swift in Sources */,
+				92C86DF62A5EA28B008ECA0F /* FooterView.swift in Sources */,
+				92C86DDD2A5B8A44008ECA0F /* WeatherModel.swift in Sources */,
+				92C86DE02A5B8A8C008ECA0F /* ResultViewController.swift in Sources */,
+				92C86DEC2A5BFFAF008ECA0F /* CollectionTableViewCell.swift in Sources */,
+				92C86E042A5FA76C008ECA0F /* PageViewController.swift in Sources */,
+				92C86DE32A5B9C12008ECA0F /* HeaderView.swift in Sources */,
+				92C86DFB2A5EA47C008ECA0F /* FooterCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +672,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92C86DEE2A5CEDC2008ECA0F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92C86DEF2A5CEDC2008ECA0F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92C86DEE2A5CEDC2008ECA0F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		92C86DB22A5B7ED0008ECA0F /* RealWeatherApp.xcdatamodeld */ = {
