@@ -6,18 +6,26 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CollectionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var viewModel = ViewModel()
+    
+    let disposebag = DisposeBag() 
+    
     let titlesList = ["🌡️체감온도", "💧습도", "⬇️최저기온", "⬆️최고기온"]
     
-    var feelsLikeData: String?
-    var humidityData: String?
-    var minTempData: String?
-    var maxTempData: String?
-            
+    // BehaviorRelay는 RxSwift에서 값의 상태를 추적하고 옵저버블로 값을 방출하는 클래스
+    // 값이 업데이트될 때마다 해당 값을 셀의 레이블에 바인딩
+    var feelsLikeData = BehaviorRelay<String?>(value: nil)
+    var humidityData = BehaviorRelay<String?>(value: nil)
+    var minTempData = BehaviorRelay<String?>(value: nil)
+    var maxTempData = BehaviorRelay<String?>(value: nil)
+    
     var spacing: CGFloat = 10.0
     
     override func awakeFromNib() {
@@ -38,19 +46,20 @@ class CollectionTableViewCell: UITableViewCell {
     
     func mainData(with data: [String: Any]) {
         if let feelsLike = data["feels_like"] as? Double {
-            feelsLikeData = kToC(kelvin: feelsLike)
+            // 변수에 값을 할당하려면 accept() 메서드를 사용
+            feelsLikeData.accept(kToC(kelvin: feelsLike))
         }
         
         if let humidity = data["humidity"] as? Double {
-            humidityData = String(humidity) + "%"
+            humidityData.accept(String(humidity) + "%")
         }
         
         if let minTemp = data["temp_min"] as? Double {
-            minTempData = kToC(kelvin: minTemp)
+            minTempData.accept(kToC(kelvin: minTemp))
         }
         
         if let maxTemp = data["temp_max"] as? Double {
-            maxTempData = kToC(kelvin: maxTemp)
+            maxTempData.accept(kToC(kelvin: maxTemp))
         }
     }
     
@@ -72,21 +81,32 @@ extension CollectionTableViewCell: UICollectionViewDelegateFlowLayout, UICollect
         
         cell.titleLabel.text = titlesList[indexPath.row]
         
-
         if titlesList[indexPath.row] == "🌡️체감온도" {
-            cell.contentLabel.text = feelsLikeData
+            feelsLikeData
+                .map { $0 ?? "" } // 옵셔널 해제
+                .bind(to: cell.contentLabel.rx.text) // 해당 값들을 셀의 레이블에 바인딩하려면 bind(to:) 메서드를 사용
+                .disposed(by: disposebag)
         }
         
         if titlesList[indexPath.row] == "💧습도" {
-            cell.contentLabel.text = humidityData
+            humidityData
+                .map { $0 ?? "" }
+                .bind(to: cell.contentLabel.rx.text)
+                .disposed(by: disposebag)
         }
         
         if titlesList[indexPath.row] == "⬇️최저기온" {
-            cell.contentLabel.text = minTempData
+            minTempData
+                .map { $0 ?? "" }
+                .bind(to: cell.contentLabel.rx.text)
+                .disposed(by: disposebag)
         }
         
         if titlesList[indexPath.row] == "⬆️최고기온" {
-            cell.contentLabel.text = maxTempData
+            maxTempData
+                .map { $0 ?? "" }
+                .bind(to: cell.contentLabel.rx.text)
+                .disposed(by: disposebag)
         }
         
         cell.layer.cornerRadius = 10

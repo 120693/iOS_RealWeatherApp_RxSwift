@@ -58,7 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		92C86DA62A5B7ED0008ECA0F /* RealWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C86DA62A5B7ED0008ECA0F /* RealWeatherApp_RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealWeatherApp_RxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C86DA92A5B7ED0008ECA0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C86DAB2A5B7ED0008ECA0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		92C86DAD2A5B7ED0008ECA0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,9 +67,9 @@
 		92C86DB52A5B7ED4008ECA0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92C86DB82A5B7ED4008ECA0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92C86DBA2A5B7ED4008ECA0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92C86DBF2A5B7ED5008ECA0F /* RealWeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealWeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C86DBF2A5B7ED5008ECA0F /* RealWeatherApp_RxSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealWeatherApp_RxSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C86DC32A5B7ED5008ECA0F /* RealWeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealWeatherAppTests.swift; sourceTree = "<group>"; };
-		92C86DC92A5B7ED5008ECA0F /* RealWeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealWeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C86DC92A5B7ED5008ECA0F /* RealWeatherApp_RxSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealWeatherApp_RxSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C86DCD2A5B7ED5008ECA0F /* RealWeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealWeatherAppUITests.swift; sourceTree = "<group>"; };
 		92C86DCF2A5B7ED5008ECA0F /* RealWeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealWeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		92C86DDC2A5B8A44008ECA0F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
@@ -133,9 +133,9 @@
 		92C86DA72A5B7ED0008ECA0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92C86DA62A5B7ED0008ECA0F /* RealWeatherApp.app */,
-				92C86DBF2A5B7ED5008ECA0F /* RealWeatherAppTests.xctest */,
-				92C86DC92A5B7ED5008ECA0F /* RealWeatherAppUITests.xctest */,
+				92C86DA62A5B7ED0008ECA0F /* RealWeatherApp_RxSwift.app */,
+				92C86DBF2A5B7ED5008ECA0F /* RealWeatherApp_RxSwiftTests.xctest */,
+				92C86DC92A5B7ED5008ECA0F /* RealWeatherApp_RxSwiftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,9 +224,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		92C86DA52A5B7ED0008ECA0F /* RealWeatherApp */ = {
+		92C86DA52A5B7ED0008ECA0F /* RealWeatherApp_RxSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92C86DD32A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherApp" */;
+			buildConfigurationList = 92C86DD32A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherApp_RxSwift" */;
 			buildPhases = (
 				92C86DA22A5B7ED0008ECA0F /* Sources */,
 				92C86DA32A5B7ED0008ECA0F /* Frameworks */,
@@ -236,7 +236,7 @@
 			);
 			dependencies = (
 			);
-			name = RealWeatherApp;
+			name = RealWeatherApp_RxSwift;
 			packageProductDependencies = (
 				92C86DEF2A5CEDC2008ECA0F /* Kingfisher */,
 				92C86F0A2A67CA47008ECA0F /* RxCocoa */,
@@ -244,12 +244,12 @@
 				92C86F0E2A67CA47008ECA0F /* RxSwift */,
 			);
 			productName = RealWeatherApp;
-			productReference = 92C86DA62A5B7ED0008ECA0F /* RealWeatherApp.app */;
+			productReference = 92C86DA62A5B7ED0008ECA0F /* RealWeatherApp_RxSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		92C86DBE2A5B7ED5008ECA0F /* RealWeatherAppTests */ = {
+		92C86DBE2A5B7ED5008ECA0F /* RealWeatherApp_RxSwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92C86DD62A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherAppTests" */;
+			buildConfigurationList = 92C86DD62A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherApp_RxSwiftTests" */;
 			buildPhases = (
 				92C86DBB2A5B7ED5008ECA0F /* Sources */,
 				92C86DBC2A5B7ED5008ECA0F /* Frameworks */,
@@ -260,14 +260,14 @@
 			dependencies = (
 				92C86DC12A5B7ED5008ECA0F /* PBXTargetDependency */,
 			);
-			name = RealWeatherAppTests;
+			name = RealWeatherApp_RxSwiftTests;
 			productName = RealWeatherAppTests;
-			productReference = 92C86DBF2A5B7ED5008ECA0F /* RealWeatherAppTests.xctest */;
+			productReference = 92C86DBF2A5B7ED5008ECA0F /* RealWeatherApp_RxSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		92C86DC82A5B7ED5008ECA0F /* RealWeatherAppUITests */ = {
+		92C86DC82A5B7ED5008ECA0F /* RealWeatherApp_RxSwiftUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92C86DD92A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherAppUITests" */;
+			buildConfigurationList = 92C86DD92A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherApp_RxSwiftUITests" */;
 			buildPhases = (
 				92C86DC52A5B7ED5008ECA0F /* Sources */,
 				92C86DC62A5B7ED5008ECA0F /* Frameworks */,
@@ -278,9 +278,9 @@
 			dependencies = (
 				92C86DCB2A5B7ED5008ECA0F /* PBXTargetDependency */,
 			);
-			name = RealWeatherAppUITests;
+			name = RealWeatherApp_RxSwiftUITests;
 			productName = RealWeatherAppUITests;
-			productReference = 92C86DC92A5B7ED5008ECA0F /* RealWeatherAppUITests.xctest */;
+			productReference = 92C86DC92A5B7ED5008ECA0F /* RealWeatherApp_RxSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -306,7 +306,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 92C86DA12A5B7ED0008ECA0F /* Build configuration list for PBXProject "RealWeatherApp" */;
+			buildConfigurationList = 92C86DA12A5B7ED0008ECA0F /* Build configuration list for PBXProject "RealWeatherApp_RxSwift" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -323,9 +323,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92C86DA52A5B7ED0008ECA0F /* RealWeatherApp */,
-				92C86DBE2A5B7ED5008ECA0F /* RealWeatherAppTests */,
-				92C86DC82A5B7ED5008ECA0F /* RealWeatherAppUITests */,
+				92C86DA52A5B7ED0008ECA0F /* RealWeatherApp_RxSwift */,
+				92C86DBE2A5B7ED5008ECA0F /* RealWeatherApp_RxSwiftTests */,
+				92C86DC82A5B7ED5008ECA0F /* RealWeatherApp_RxSwiftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -408,12 +408,12 @@
 /* Begin PBXTargetDependency section */
 		92C86DC12A5B7ED5008ECA0F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 92C86DA52A5B7ED0008ECA0F /* RealWeatherApp */;
+			target = 92C86DA52A5B7ED0008ECA0F /* RealWeatherApp_RxSwift */;
 			targetProxy = 92C86DC02A5B7ED5008ECA0F /* PBXContainerItemProxy */;
 		};
 		92C86DCB2A5B7ED5008ECA0F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 92C86DA52A5B7ED0008ECA0F /* RealWeatherApp */;
+			target = 92C86DA52A5B7ED0008ECA0F /* RealWeatherApp_RxSwift */;
 			targetProxy = 92C86DCA2A5B7ED5008ECA0F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -621,7 +621,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealWeatherApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RealWeatherApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealWeatherApp_RxSwift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RealWeatherApp_RxSwift";
 			};
 			name = Debug;
 		};
@@ -640,7 +640,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealWeatherApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RealWeatherApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealWeatherApp_RxSwift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RealWeatherApp_RxSwift";
 			};
 			name = Release;
 		};
@@ -681,7 +681,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92C86DA12A5B7ED0008ECA0F /* Build configuration list for PBXProject "RealWeatherApp" */ = {
+		92C86DA12A5B7ED0008ECA0F /* Build configuration list for PBXProject "RealWeatherApp_RxSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92C86DD12A5B7ED5008ECA0F /* Debug */,
@@ -690,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92C86DD32A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherApp" */ = {
+		92C86DD32A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherApp_RxSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92C86DD42A5B7ED5008ECA0F /* Debug */,
@@ -699,7 +699,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92C86DD62A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherAppTests" */ = {
+		92C86DD62A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherApp_RxSwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92C86DD72A5B7ED5008ECA0F /* Debug */,
@@ -708,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92C86DD92A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherAppUITests" */ = {
+		92C86DD92A5B7ED5008ECA0F /* Build configuration list for PBXNativeTarget "RealWeatherApp_RxSwiftUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92C86DDA2A5B7ED5008ECA0F /* Debug */,

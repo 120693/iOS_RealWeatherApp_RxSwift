@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import RxSwift
 
 public func kToC(kelvin: Double) -> String {
     let celsius: Double
@@ -26,6 +27,8 @@ class ResultViewController: UIViewController {
     var viewModel = ViewModel()
     
     var cityName:String
+    
+    let disposebag = DisposeBag() // dispose 를 할 일들이 생길 때마다 DisposeBag 에 담아두었다가 한꺼번에 종료할 수 있다.
     
     init(cityName:String) {
         self.cityName = cityName
@@ -71,27 +74,37 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
         
         if section == 0 {
-            if let name = viewModel.weatherInfo?["name"] as? String {
-                view.cityNameLabel.text = name
-            }
-            
-            if let temp = viewModel.mainDict["temp"] as? Double {
-                view.feelTempLabel.text = kToC(kelvin: temp)
-            }
-            
-            if let icon = viewModel.weatherDict["icon"] as? String {
-                guard let url = URL(string: "https://openweathermap.org/img/wn/\(icon)@2x.png") else { return nil }
-                view.iconImageView.kf.setImage(with: url)
-                view.iconImageView.contentMode = .scaleAspectFill
-            }
-            
-            if let maxTemp = viewModel.mainDict["temp_max"] as? Double {
-                view.maxTempLabel.text = "최고:" + kToC(kelvin: maxTemp)
-            }
-            
-            if let minTemp = viewModel.mainDict["temp_min"] as? Double {
-                view.minTempLabel.text = "최저:" + kToC(kelvin: minTemp)
-            }
+                view.cityNameLabel.text = cityName
+                        
+            viewModel.weatherDict
+                .observe(on: MainScheduler.instance) // UI 관련 작업은 메인 스레드에서 이벤트 처리
+                .subscribe(onNext: { [weak view] weatherDict in // .subscribe(onNext:) 메서드를 사용하여 Observable을 구독합니다. 이렇게 하면 Observable에서 이벤트가 발생할 때마다 클로저가 실행
+                        guard let view = view else { return }
+                        if let icon = weatherDict["icon"] as? String {
+                            let urlString = "https://openweathermap.org/img/wn/\(icon)@2x.png"
+                            if let url = URL(string: urlString) {
+                                view.iconImageView.kf.setImage(with: url)
+                                view.iconImageView.contentMode = .scaleAspectFill
+                            }
+                        }
+                    })
+                .disposed(by: disposebag)
+                        
+            viewModel.mainDict
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak view] mainDict in
+                    guard let view = view else { return }
+                    if let maxTemp = mainDict["temp_max"] as? Double {
+                        view.maxTempLabel.text = "최고:" + kToC(kelvin: maxTemp)
+                    }
+                    if let temp = mainDict["temp"] as? Double {
+                        view.feelTempLabel.text = kToC(kelvin: temp)
+                    }
+                    if let minTemp = mainDict["temp_min"] as? Double {
+                        view.minTempLabel.text = "최저:" + kToC(kelvin: minTemp)
+                    }
+                })
+                .disposed(by: disposebag)
             
             return view
         } else {
@@ -138,7 +151,12 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionTableViewCell", for: indexPath) as! CollectionTableViewCell
             
-            cell.mainData(with: viewModel.mainDict)
+            viewModel.mainDict
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { mainDick in
+                    cell.mainData(with: mainDick)
+                })
+                .disposed(by: disposebag)
             
             return cell
         } else {
