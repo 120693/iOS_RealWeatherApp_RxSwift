@@ -15,16 +15,16 @@ class CollectionTableViewCell: UITableViewCell {
     
     var viewModel = ViewModel()
     
-    let disposebag = DisposeBag() 
+    let disposebag = DisposeBag() // 구독을 관리하기 위해 DisposeBag이 사용
     
     let titlesList = ["🌡️체감온도", "💧습도", "⬇️최저기온", "⬆️최고기온"]
     
     // BehaviorRelay는 RxSwift에서 값의 상태를 추적하고 옵저버블로 값을 방출하는 클래스
     // 값이 업데이트될 때마다 해당 값을 셀의 레이블에 바인딩
-    var feelsLikeData = BehaviorRelay<String?>(value: nil)
-    var humidityData = BehaviorRelay<String?>(value: nil)
-    var minTempData = BehaviorRelay<String?>(value: nil)
-    var maxTempData = BehaviorRelay<String?>(value: nil)
+    var feelsLikeData = BehaviorRelay<String?>(value: "")
+    var humidityData = BehaviorRelay<String?>(value: "")
+    var minTempData = BehaviorRelay<String?>(value: "")
+    var maxTempData = BehaviorRelay<String?>(value: "")
     
     var spacing: CGFloat = 10.0
     
@@ -46,7 +46,7 @@ class CollectionTableViewCell: UITableViewCell {
     
     func mainData(with data: [String: Any]) {
         if let feelsLike = data["feels_like"] as? Double {
-            // 변수에 값을 할당하려면 accept() 메서드를 사용
+            // 변수에 값을 할당하려면 accept() 메서드를 사용 - BehaviorRelay는 항상 초기값을 필요로 한다.
             feelsLikeData.accept(kToC(kelvin: feelsLike))
         }
         
@@ -83,9 +83,11 @@ extension CollectionTableViewCell: UICollectionViewDelegateFlowLayout, UICollect
         
         if titlesList[indexPath.row] == "🌡️체감온도" {
             feelsLikeData
+            // .map 연산자는 Observable이 방출하는 항목들을 변환하는 연산자
+            // $0은 클로저 내에서 현재 값을 의미함
                 .map { $0 ?? "" } // 옵셔널 해제
-                .bind(to: cell.contentLabel.rx.text) // 해당 값들을 셀의 레이블에 바인딩하려면 bind(to:) 메서드를 사용
-                .disposed(by: disposebag)
+                .bind(to: cell.contentLabel.rx.text) // Observable의 값들을 특정 UI 요소에 바인딩하려면 bind(to:) 메서드를 사용
+                .disposed(by: disposebag) // 구독이 더 이상 필요하지 않을 때 해당 DisposeBag이 해제되면 연관된 모든 Disposable도 자동으로 해제됩니다.
         }
         
         if titlesList[indexPath.row] == "💧습도" {
